@@ -1,7 +1,10 @@
 import Head from 'next/head'
 import { HomeStyled } from '../styles/pages/Home.styled'
+import { connect } from 'react-redux'
 
-export default function Home() {
+
+const Home = ({ user }: any) => {
+
   return (
     <div>
       <Head>
@@ -10,7 +13,17 @@ export default function Home() {
       </Head>
       <HomeStyled>
         <h1>Home Page</h1>
+        <img src="/images/demo.png" alt="..." />
+        <img src="/images/facebook-icon.svg" alt="..." />
       </HomeStyled>
     </div>
   )
 }
+
+const mapStateToProps = (state: any) => {
+  return {
+    user: state.auth.user
+  }
+}
+
+export default connect(mapStateToProps)(Home)

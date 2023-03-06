@@ -1,6 +1,7 @@
 
 export const LightTheme = {
     colors: {
-        darkColor: 'blue'
+        darkColor: 'blue',
+        background: 'lightgrey'
     }
 }

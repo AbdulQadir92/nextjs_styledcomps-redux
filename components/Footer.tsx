@@ -1,8 +1,8 @@
-
+import { FooterStyled } from "../styles/components/Footer.styled"
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <FooterStyled>Footer</FooterStyled>
   )
 }
 
