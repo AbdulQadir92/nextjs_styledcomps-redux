@@ -2,11 +2,19 @@ import { connect } from 'react-redux'
 import { getAlbums } from "../../store/actions/albumActions"
 import { useEffect } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 
-const Albums = ({ getAlbums, albums, error }: any) => {
+const Albums = ({ getAlbums, albums, error, user }: any) => {
+    const router = useRouter();
+
+    // private route
     useEffect(() => {
-        getAlbums()
+        if (Object.keys(user).length) {
+            getAlbums();
+        } else {
+            router.push('/');
+        }
     }, [])
 
     return (
@@ -26,7 +34,8 @@ const Albums = ({ getAlbums, albums, error }: any) => {
 const mapStateToProps = (state: any) => {
     return {
         albums: state.albums.albums,
-        error: state.albums.error
+        error: state.albums.error,
+        user: state.auth.user
     }
 }
 
