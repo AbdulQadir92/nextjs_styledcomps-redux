@@ -8,7 +8,7 @@ const Home = ({ user }: any) => {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Responsive Homepage</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HomeStyled>
