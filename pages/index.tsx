@@ -1,5 +1,5 @@
 import Head from 'next/head'
-
+import { HomeStyled } from '../styles/pages/Home.styled'
 
 export default function Home() {
   return (
@@ -8,9 +8,9 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>
+      <HomeStyled>
         <h1>Home Page</h1>
-      </div>
+      </HomeStyled>
     </div>
   )
 }
