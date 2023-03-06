@@ -13,7 +13,7 @@ const Navbar = ({ toggleTheme, logout }: any) => {
   }
 
   return (
-    <NavbarStyled>
+    <NavbarStyled id="navbar">
       <h3 onClick={toggleTheme}>Change Theme</h3>
       <ul>
         <li>
