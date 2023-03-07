@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import { HomeStyled } from '../styles/pages/Home.styled'
+import Hero from '../components/homepage/Hero'
 import { connect } from 'react-redux'
 
-
-const Home = ({ user }: any) => {
+const Home = () => {
 
   return (
     <div>
@@ -12,9 +12,7 @@ const Home = ({ user }: any) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HomeStyled>
-        <h1>Home Page</h1>
-        <img src="/images/demo.png" alt="..." />
-        <img src="/images/facebook-icon.svg" alt="..." />
+        <Hero />
       </HomeStyled>
     </div>
   )

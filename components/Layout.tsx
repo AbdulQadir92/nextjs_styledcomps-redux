@@ -3,9 +3,9 @@ import Footer from "./Footer";
 
 const Layout = ({ children, toggleTheme }: any) => {
   return (
-    <div>
+    <div id="app">
       <Navbar toggleTheme={toggleTheme} />
-        <div>{children}</div>
+      <div>{children}</div>
       <Footer />
     </div>
   );
